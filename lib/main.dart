@@ -95,6 +95,25 @@ class MyApp extends StatelessWidget {
                   ),
                 ),
               ),
+              Card(
+                  margin:
+                      const EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: ListTile(
+                      leading: Icon(
+                        Icons.person,
+                        color: Colors.blue[800],
+                      ),
+                      title: const Text(
+                        'linkedin/in/felipeavmuller',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'SourceSans',
+                          fontSize: 20,
+                        ),
+                      ))),
             ],
           ),
         ),
