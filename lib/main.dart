@@ -12,14 +12,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.blue[600],
-        body: const SafeArea(
+        body: SafeArea(
           child: Column(
             children: <Widget>[
-              CircleAvatar(
+              const CircleAvatar(
                 radius: 50,
                 backgroundImage: AssetImage('images/profile.jpg'),
               ),
-              Text(
+              const Text(
                 'Felipe Muller',
                 style: TextStyle(
                   fontSize: 40,
@@ -28,6 +28,16 @@ class MyApp extends StatelessWidget {
                   fontFamily: 'Pacifico',
                 ),
               ),
+              Text(
+                'FLUTTER DEVELOPER',
+                style: TextStyle(
+                  fontSize: 18,
+                  fontFamily: 'SourceSans',
+                  fontWeight: FontWeight.bold,
+                  color: Colors.teal[100],
+                  letterSpacing: 2,
+                ),
+              )
             ],
           ),
         ),
