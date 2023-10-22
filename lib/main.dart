@@ -11,14 +11,17 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.blue[600],
+        backgroundColor: Colors.blue[800],
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               const CircleAvatar(
                 radius: 50,
                 backgroundImage: AssetImage('images/profile.jpg'),
               ),
+              // SizedBox(width: double.infinity), // se precisasse centralizar horizontalmente
               const Text(
                 'Felipe Muller',
                 style: TextStyle(
@@ -34,10 +37,64 @@ class MyApp extends StatelessWidget {
                   fontSize: 18,
                   fontFamily: 'SourceSans',
                   fontWeight: FontWeight.bold,
-                  color: Colors.teal[100],
+                  color: Colors.teal[200],
                   letterSpacing: 2,
                 ),
-              )
+              ),
+              SizedBox(
+                width: 150,
+                height: 40,
+                child: Divider(
+                  color: Colors.teal[100],
+                  thickness: 1,
+                ),
+              ),
+              Card(
+                elevation: 10,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                margin:
+                    const EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    color: Colors.blue[800],
+                  ),
+                  title: Text(
+                    '+55 51 9 9999 9999',
+                    style: TextStyle(
+                      color: Colors.teal[900],
+                      fontFamily: 'SourceSans',
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                    ),
+                  ),
+                ),
+              ),
+              Card(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                elevation: 10,
+                margin:
+                    const EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    color: Colors.blue[800],
+                  ),
+                  title: Text(
+                    'felipeavmuller@gmail.com',
+                    style: TextStyle(
+                      color: Colors.teal[900],
+                      fontFamily: 'SourceSans',
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
